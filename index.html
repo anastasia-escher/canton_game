@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+    <script crossorigin=""
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>Geo Quiz</title>
+    <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          rel="stylesheet"/>
+    <script crossorigin=""
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+            rel="stylesheet"
+    />
+
+</head>
+<body>
+
+<section class="py-20 b2">
+
+    <div class="container mx-auto px-4 b w-3/4 p-10">
+        <div class="max-w-6xl mx-auto relative">
+            <h2 class="mb-6 text-3xl lg:text-3xl font-bold font-heading text-center animate__animated" id="title">Switzerland geo-quiz</h2>
+            <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mx-auto block w-max mb-10"
+                    id="startButton">Start New Game
+            </button>
+            <div class="mb-12" id="map"></div>
+
+            <article class="playField-wrapper">
+                <div class="mb-12 hidden animate__animated" id="playField" >
+                    <h3 class="pb-4 pt-10 text-xl font-bold font-heading text-center">Type in the name of the <span class="text-green-500">green</span>
+                        canton <span class="text-bold text-red-400"> (in its official language, e. g. Genève and not Genf)</span></h3>
+                    <div class="container mx-auto px-4">
+
+                        <form action="" class="flex flex-col items-center">
+                            <div class="mb-8 w-1/2">
+                                <input class="py-2 mx-auto h-11 w-full text-gray-500 placeholder-gray-500 bg-opacity-40 border border-gray-200 focus:border-yellowGreen-500 rounded-lg shadow-small outline-none ring ring-transparent focus:ring-yellowGreen-500"
+                                       id="answer"
+                                       type="text">
+                            </div>
+                            <button
+                                    class="py-2 mb-8 w-1/3 font-bold text-white bg-blue-500 hover:bg-blue-700 rounded-lg transition-all duration-300 focus:outline-none"
+                                    id="submitButton"
+                                    type="submit">
+                                Submit
+                            </button>
+                        </form>
+
+                    </div>
+                    <div class="pb-5 text-center lg:text-2xl" id="score">
+                        <p class="text-blue-500 font-bold leading-loose">Your score: <span id="scoreNumber"></span></p>
+                    </div>
+                </div>
+                <div id="gameOverField" class="hidden animate__animated">
+                    Game Over!
+                    <p>Your score: <span id="scoreNumberGameOver"></span></p>
+                    <p class="rightAnswer">Right answer: <span id="rightAnswer"></span></p>
+                </div>
+                <div id="winField" class="hidden animate__animated">
+                    Congratulations! You won the game!
+                </div>
+
+
+            </article>
+        </div>
+    </div>
+
+</section>
+
+
+</div>
+</body>
+<script src="script.js"></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        setTimeout(() => {
+
+            document.getElementById('title').classList.add('animate__tada');
+
+        }, 200);
+    });
+</script>
+</html>

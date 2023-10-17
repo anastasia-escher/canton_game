@@ -1,0 +1,68 @@
+
+#map {
+    height: 480px;
+    width: 90%;
+    margin: 10px auto;
+
+}
+
+.center {
+    text-align: center;
+    margin: 300px auto;
+}
+
+.b {
+    background: rgba(0,0,0,0.5);
+    padding-top: 20px;
+    overflow-x: auto;
+}
+
+body {
+    color: aliceblue;
+    background-image: url("bridge-4636745.jpg");
+    baground-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    display: none;
+}
+
+.playField-wrapper {
+    min-height: 100px;
+    width: 100%;
+}
+
+#gameOverField {
+    background-color: crimson;
+    color: white;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    font-size: 1.9rem;
+    padding-top: 20px;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+#gameOverField  > p {
+    font-size: 1.2rem;
+}
+
+.rightAnswer {
+    font-size: 0.3rem;
+}
+
+#winField {
+    background-image: url('flag.jpg');
+    background-size: cover;
+    color: white;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 120px;
+    margin: 30px auto;
+    border-radius: 5px;
+    padding-bottom: 50px;
+}
