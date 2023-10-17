@@ -169,7 +169,7 @@
     const convertName = (answer) => {
 
         if (['st. gallen', 'sankt gallen', 'st gallen'].includes(answer)) {
-            return 'sankt gallen'
+            return 'st. gallen'
         } else if (['basel stadt', 'basel-stadt'].includes(answer)) {
             return 'basel-stadt'
         } else if (['basel landschaft', 'basel-landschaft'].includes(answer)) {
